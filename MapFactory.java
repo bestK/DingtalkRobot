@@ -1,13 +1,8 @@
 package com.vinohobby.pro.util;
 
-import java.util.HashMap;
+import java.util.HashMap
 
-/**
- * 获取可变的HashMap
- * 2017-03-26
- *
- * @see com.google.common.collect.ImmutableMap
- */
+
 public class MapFactory {
     public static HashMap<String, Object> of() {
         HashMap<String, Object> map = new HashMap<>();

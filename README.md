@@ -2,11 +2,10 @@
 
 
 
-maven 依
+maven 依赖
 
-```
-
-<dependency>
+```xml
+       <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
@@ -22,6 +21,5 @@ maven 依
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>fluent-hc</artifactId>
             <version>4.5.2</version>
-        </dependency>
-        
+        </dependency>       
 ```

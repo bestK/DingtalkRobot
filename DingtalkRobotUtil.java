@@ -15,8 +15,7 @@ import static com.vinohobby.pro.util.MapFactory.of;
  * ectest@foxmail.com
  */
 public class DingtalkRobotUtil {
-    private final static String URL = "https://oapi.dingtalk.com/robot/send?access_token=YOUR_TOKEN";
-
+    private final static String URL = "https://oapi.dingtalk.com/robot/send?access_token=YOUR_TOKEN"
     /**
      * 发送文字消息
      *
@@ -32,16 +31,7 @@ public class DingtalkRobotUtil {
                 "isAtAll", isAtAll
         );
 
-        String returnString = null;
-
-        try {
-            returnString = Request.Post(URL).connectTimeout(3000)
-                    .bodyString(JSON.toJSONString(map), ContentType.APPLICATION_JSON).execute().returnContent().asString();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return returnString;
+        return post(map);
     }
 
     /**
@@ -62,16 +52,7 @@ public class DingtalkRobotUtil {
                 "isAtAll", isAtAll
         );
 
-        String returnString = null;
-
-        try {
-            returnString = Request.Post(URL).connectTimeout(3000)
-                    .bodyString(JSON.toJSONString(map), ContentType.APPLICATION_JSON).execute().returnContent().asString();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return returnString;
+        return post(map);
     }
 
     /**
@@ -90,16 +71,23 @@ public class DingtalkRobotUtil {
                 "isAtAll", isAtAll
         );
 
+        return post(map);
+    }
+
+
+    private static String post(Map body) {
+
         String returnString = null;
 
         try {
             returnString = Request.Post(URL).connectTimeout(3000)
-                    .bodyString(JSON.toJSONString(map), ContentType.APPLICATION_JSON).execute().returnContent().asString();
+                    .bodyString(JSON.toJSONString(body), ContentType.APPLICATION_JSON).execute().returnContent().asString();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return returnString;
+
     }
+
 
 }

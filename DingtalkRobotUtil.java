@@ -7,7 +7,7 @@ import org.apache.http.entity.ContentType;
 import java.io.IOException;
 import java.util.Map;
 
-import static com.vinohobby.pro.util.MapFactory.of;
+import static com.domain.pro.util.MapFactory.of;
 
 
 /**

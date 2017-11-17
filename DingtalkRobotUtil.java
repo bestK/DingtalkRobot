@@ -1,4 +1,4 @@
-package com.vinohobby.pro.util;
+package com.domain.pro.util;
 
 import com.alibaba.fastjson.JSON;
 import org.apache.http.client.fluent.Request;

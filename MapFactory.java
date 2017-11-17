@@ -1,4 +1,4 @@
-package com.vinohobby.pro.util;
+package com.domain.pro.util;
 
 import java.util.HashMap
 

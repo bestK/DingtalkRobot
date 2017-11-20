@@ -4,6 +4,30 @@ import java.util.HashMap
 
 
 public class MapFactory {
+    /**
+     * 更少的代码封装参数
+     */
+    private HashMap<String, Object> map = new HashMap<>();
+
+    public HashMap<String, Object> getMap() {
+        return map;
+    }
+
+    public MapFactory setMap(HashMap<String, Object> map) {
+        this.map = map;
+        return this;
+    }
+
+    public MapFactory put(String k1, Object v1) {
+        map.put(k1, v1);
+        return this;
+    }
+    /**
+     * 更少的代码封装参数
+     */
+
+
+
     public static HashMap<String, Object> of() {
         HashMap<String, Object> map = new HashMap<>();
         return map;
